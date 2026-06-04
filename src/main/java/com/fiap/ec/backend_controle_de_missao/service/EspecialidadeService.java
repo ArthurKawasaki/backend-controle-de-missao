@@ -1,6 +1,5 @@
 package com.fiap.ec.backend_controle_de_missao.service;
 
-package com.fiap.ec.backend_controle_de_missao.service;
 import com.fiap.ec.backend_controle_de_missao.model.Especialidade;
 import com.fiap.ec.backend_controle_de_missao.repository.EspecialidadeRepository;
 import org.springframework.stereotype.Service;
