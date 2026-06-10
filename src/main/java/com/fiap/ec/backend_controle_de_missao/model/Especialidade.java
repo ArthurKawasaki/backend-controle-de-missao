@@ -1,5 +1,4 @@
 package com.fiap.ec.backend_controle_de_missao.model;
-
 import jakarta.persistence.*;
 @Entity
 @Table(name = "especialidades")

@@ -2,7 +2,6 @@ package com.fiap.ec.backend_controle_de_missao.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalTime;
 @Entity
 @Table(name = "equipamentos")
 public class Equipamento {
@@ -11,38 +10,27 @@ public class Equipamento {
     private Long id;
     @Column(nullable = false)
     private String tipoEquipamento;
-    private String local;
-    private String situacao;
-    private String valor;
-    private LocalDate dataEvento;
-    private LocalTime horaEvento;
+    @Column(nullable = false)
+    private String localInstalacao;
+    private LocalDate dataInstalacao;
     private Boolean ativo;
     public Equipamento() {
     }
-    public Equipamento(String tipoEquipamento, String local, String situacao,
-                    String valor, LocalDate dataEvento, LocalTime horaEvento, Boolean ativo) {
+    public Equipamento(String tipoEquipamento, String localInstalacao,
+                       LocalDate dataInstalacao, Boolean ativo) {
         this.tipoEquipamento = tipoEquipamento;
-        this.local = local;
-        this.situacao = situacao;
-        this.valor = valor;
-        this.dataEvento = dataEvento;
-        this.horaEvento = horaEvento;
+        this.localInstalacao = localInstalacao;
+        this.dataInstalacao = dataInstalacao;
         this.ativo = ativo;
     }
     public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
     public String getTipoEquipamento() { return tipoEquipamento; }
-    public String getLocal() { return local; }
-    public String getSituacao() { return situacao; }
-    public String getValor() { return valor; }
-    public LocalDate getDataEvento() { return dataEvento; }
-    public LocalTime getHoraEvento() { return horaEvento; }
+    public String getLocalInstalacao() { return localInstalacao; }
+    public LocalDate getDataInstalacao() { return dataInstalacao; }
     public Boolean getAtivo() { return ativo; }
-
     public void setTipoEquipamento(String tipoEquipamento) { this.tipoEquipamento = tipoEquipamento; }
-    public void setLocal(String local) { this.local = local; }
-    public void setSituacao(String situacao) { this.situacao = situacao; }
-    public void setValor(String valor) { this.valor = valor; }
-    public void setDataEvento(LocalDate dataEvento) { this.dataEvento = dataEvento; }
-    public void setHoraEvento(LocalTime horaEvento) { this.horaEvento = horaEvento; }
+    public void setLocalInstalacao(String localInstalacao) { this.localInstalacao = localInstalacao; }
+    public void setDataInstalacao(LocalDate dataInstalacao) { this.dataInstalacao = dataInstalacao; }
     public void setAtivo(Boolean ativo) { this.ativo = ativo; }
 }
