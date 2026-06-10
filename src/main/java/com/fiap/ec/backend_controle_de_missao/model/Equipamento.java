@@ -10,7 +10,6 @@ public class Equipamento {
     private Long id;
     @Column(nullable = false)
     private String tipoEquipamento;
-    @Column(nullable = false)
     private String localInstalacao;
     private LocalDate dataInstalacao;
     private Boolean ativo;

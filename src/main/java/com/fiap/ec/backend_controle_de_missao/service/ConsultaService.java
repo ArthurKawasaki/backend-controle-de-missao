@@ -35,7 +35,6 @@ public class ConsultaService {
     }
 
     public Consulta salvar(Consulta consulta) {
-        // Resolve Médico e Paciente pelo ID para garantir que existem no banco
         Local local = localRepository.findById(consulta.getLocal().getId())
                 .orElseThrow(() -> new RuntimeException("Locacl não encontrado"));
         Equipamento equipamento = equipamentoRepository.findById(consulta.getEquipamento().getId())

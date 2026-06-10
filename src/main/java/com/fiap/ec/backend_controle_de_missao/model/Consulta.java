@@ -50,7 +50,22 @@ public class Consulta {
         this.dataHora = dataHora;
         this.status = status;
         this.valor = valor;
-        this.observacoes = observacoes;
     }
+    public Long getId() { return id; }
+    public Local getLocal() { return local; }
+    public Equipamento getEquipamento() { return equipamento; }
+    public LocalDateTime getDataHora() { return dataHora; }
+    public String getStatus() { return status; }
+    public Double getValor() { return valor; }
+    public String getObservacoes() { return observacoes; }
+
+    public void setId(Long id) { this.id = id; }
+    public void setLocal(Local local) { this.local = local; }
+    public void setEquipamento(Equipamento equipamento) { this.equipamento = equipamento; }
+    public void setDataHora(LocalDateTime dataHora) { this.dataHora = dataHora; }
+    public void setStatus(String status) { this.status = status; }
+    public void setValor(Double valor) { this.valor = valor; }
+    public void setObservacoes(String observacoes) { this.observacoes = observacoes; }
 
 }
+
